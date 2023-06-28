@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "StratosSkyeng";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("statosskyeng-v1.001/Webfonts/stratosskyengweb-regular.woff2") format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: StratosSkyeng;
+}
+
+.box {
+    background-color: #C2F5FF;
+    max-width: 480px;
+    min-height: 459px;
+    border-radius: 12px;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 57px;
+    padding-top: 52px;
+    padding-bottom: 48px;
+}
+
+.header {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #004980;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+}
+
+.levels {
+    background-color: white;
+    border-radius: 12px;
+    color: #0080C1;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    text-align: center;
+    padding: 15px 35px;
+
+}
+
+.button {
+    background-color: #7AC100;
+    color: white;
+    width: 246px;
+    height: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+
+}
