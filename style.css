@@ -53,6 +53,10 @@ body {
   line-height: 72px;
   text-align: center;
   padding: 15px 35px;
+  transition: all 0.4s;
+}
+.difficulty-level__levels:hover {
+  transform: scale(1.05);
 }
 
 .button {
@@ -67,4 +71,13 @@ body {
   outline: none;
   border: none;
   box-sizing: border-box;
+  transition: all 0.4s;
+}
+.button:hover {
+  transform: scale(1.05);
+}
+
+.background {
+  background-color: #004980;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
