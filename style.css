@@ -20,7 +20,8 @@ body {
   margin: auto;
   margin-top: 100px;
 }
-.cards__container {
+
+.modal {
   background-color: #C2F5FF;
   border-radius: 12px;
   display: flex;
@@ -30,19 +31,20 @@ body {
   padding-top: 52px;
   padding-bottom: 48px;
 }
-.cards__header {
+.modal__header {
   font-weight: 400;
   font-size: 40px;
   line-height: 48px;
   text-align: center;
   color: #004980;
 }
-.cards__flex-container {
+
+.difficulty-level__flex-container {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
-.cards__levels {
+.difficulty-level__levels {
   background-color: white;
   border-radius: 12px;
   color: #0080C1;
@@ -52,7 +54,8 @@ body {
   text-align: center;
   padding: 15px 35px;
 }
-.cards__button {
+
+.button {
   background-color: #7AC100;
   color: white;
   width: 246px;
