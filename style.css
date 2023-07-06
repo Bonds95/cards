@@ -14,11 +14,17 @@ body {
   font-family: StratosSkyeng;
 }
 
+.container {
+  background-color: #004980;
+  min-height: 774px;
+  width: 1024px;
+}
+
 .cards {
   max-width: 480px;
   min-height: 459px;
   margin: auto;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .modal {
@@ -80,4 +86,49 @@ body {
 .background {
   background-color: #004980;
   color: white;
+}
+
+.header {
+  padding-top: 22px;
+  padding-left: 22px;
+  padding-right: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__timer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.header__text-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 57px;
+}
+.header__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+.header__count {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  align-self: flex-end;
+}
+
+.cards-field {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 35px;
+  padding-left: 24.5px;
+  padding-right: 24.5px;
+  gap: 15px;
+}
+.cards-field__card {
+  width: 95px;
+  height: 133px;
 }/*# sourceMappingURL=style.css.map */

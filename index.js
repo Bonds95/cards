@@ -4,7 +4,8 @@ let appHtml = null
 let appEl = document.getElementById('app')
 
 function renderMainPage() {
-    appHtml = `<div class="cards">
+    appHtml = `<div class="container">
+    <div class="cards">
 <div class="modal difficulty-level">
  <h1 class="modal__header">
      Выбери <br>
@@ -24,6 +25,7 @@ function renderMainPage() {
  <button class="difficulty-level__button button" id="start-game-button">
       Старт
  </button>
+</div>
 </div>
 </div>`
 
