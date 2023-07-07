@@ -1,4 +1,3 @@
-
 let page = null
 let appHtml = null
 let appEl = document.getElementById('app')
@@ -66,7 +65,7 @@ easyLevelGame.addEventListener('click', () => {
     mediumLevelGame.classList.remove('background')
     easyLevelGame.classList.add('background')
     console.log('выбран легкий уровень')
-    return;
+    return
 })
 
 mediumLevelGame.addEventListener('click', () => {
@@ -75,7 +74,7 @@ mediumLevelGame.addEventListener('click', () => {
     hardLevelGame.classList.remove('background')
     mediumLevelGame.classList.add('background')
     console.log('выбран средний уровень')
-    return;
+    return
 })
 
 hardLevelGame.addEventListener('click', () => {
@@ -84,7 +83,7 @@ hardLevelGame.addEventListener('click', () => {
     mediumLevelGame.classList.remove('background')
     hardLevelGame.classList.add('background')
     console.log('выбран сложный уровень')
-    return;
+    return
 })
 
 let startGameButton = document.getElementById('start-game-button')
@@ -99,9 +98,8 @@ startGameButton.addEventListener('click', () => {
     if (gameLevel == 'hard') {
         renderHardGame()
     }
-    // почему-то если здесь просто поставить else, то не работает 
+    // почему-то если здесь просто поставить else, то не работает
     if (gameLevel == null) {
         alert('Выберите уровень сложности игры')
     }
-
 })
