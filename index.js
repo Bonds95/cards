@@ -1,7 +1,7 @@
 let page = null
 let appHtml = null
 let appEl = document.getElementById('app')
-
+//check
 function renderMainPage() {
     appHtml = `<div class="container">
     <div class="cards">
