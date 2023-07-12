@@ -1,0 +1,23 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+      "prettier/prettier": true,
+      "font-family-no-missing-generic-family-keyword": [
+          true,
+          {
+              "ignoreFontFamilies": ["StratosSkyeng"]
+          }
+      ],
+
+      "selector-class-pattern": [
+          "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+          {
+              "resolveNestedSelectors": true,
+
+
+              "message": "Selectors should follow the BEM naming convention."
+          }
+      ]
+  }
+}

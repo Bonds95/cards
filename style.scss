@@ -14,19 +14,23 @@
 
 body {
     font-family: StratosSkyeng;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #004980;
 }
 
-.container {
-    background-color: #004980;
-    min-height: 774px;
-    width: 1024px;
-}
+// .container {
+    
+//     min-height: 774px;
+//     width: 1024px;
+// }
 
 .cards {
-    max-width: 480px;
+    width: 480px;
     min-height: 459px;
     margin: auto;
-    padding-top: 100px;
 }
 
 .modal {
