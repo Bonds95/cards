@@ -1,9 +1,10 @@
 @font-face {
-    font-family: "StratosSkyeng";
+    font-family: 'StratosSkyeng';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("statosskyeng-v1.001/Webfonts/stratosskyengweb-regular.woff2") format("woff2");
+    src: url('statosskyeng-v1.001/Webfonts/stratosskyengweb-regular.woff2')
+        format('woff2');
 }
 
 * {
@@ -13,17 +14,27 @@
 
 body {
     font-family: StratosSkyeng;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #004980;
 }
 
+// .container {
+    
+//     min-height: 774px;
+//     width: 1024px;
+// }
+
 .cards {
-    max-width: 480px;
+    width: 480px;
     min-height: 459px;
     margin: auto;
-    margin-top: 100px;
 }
 
 .modal {
-    background-color: #C2F5FF;
+    background-color: #c2f5ff;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -46,13 +57,12 @@ body {
         display: flex;
         flex-direction: row;
         gap: 24px;
-
     }
 
     &__levels {
         background-color: white;
         border-radius: 12px;
-        color: #0080C1;
+        color: #0080c1;
         font-weight: 400;
         font-size: 64px;
         line-height: 72px;
@@ -64,11 +74,10 @@ body {
             transform: scale(1.05);
         }
     }
-
 }
 
 .button {
-    background-color: #7AC100;
+    background-color: #7ac100;
     color: white;
     width: 246px;
     height: 50px;
@@ -89,4 +98,54 @@ body {
 .background {
     background-color: #004980;
     color: white;
+}
+
+.header {
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-right: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__timer {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 57px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    &__count {
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 72px;
+        align-self: flex-end;
+    }
+}
+
+.cards-field {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 35px;
+    padding-left: 24.5px;
+    padding-right: 24.5px;
+    gap: 15px;
+
+    &__card {
+        width: 95px;
+        height: 133px;
+    }
 }
