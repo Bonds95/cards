@@ -13,19 +13,16 @@
 }
 
 body {
+    background-color: #004980;
     font-family: StratosSkyeng;
+}
+
+.flex-container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #004980;
 }
-
-// .container {
-    
-//     min-height: 774px;
-//     width: 1024px;
-// }
 
 .cards {
     width: 480px;
