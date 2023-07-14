@@ -3,8 +3,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('statosskyeng-v1.001/Webfonts/stratosskyengweb-regular.woff2')
-        format('woff2');
+    src: url('./static/fonts/stratosskyengweb-regular.woff2') format('woff2');
 }
 
 * {
@@ -142,6 +141,10 @@ body {
     gap: 15px;
 
     &__card {
+        width: 95px;
+        height: 133px;
+    }
+    &__card-clone {
         width: 95px;
         height: 133px;
     }

@@ -1,3 +1,5 @@
+// import './style.css'
+
 let appHtml = null
 let appEl = document.getElementById('app')
 //check
@@ -31,42 +33,42 @@ function renderMainPage() {
 }
 renderMainPage()
 
-const tuzPik = `<img src="img/tuz-pik.png" alt="card">`
-const kingPik = `<img src="img/king-pik.png" alt="card">`
-const ladyPik = `<img src="img/lady-pik.png" alt="card">`
-const valPik = `<img src="img/val-pik.png" alt="card">`
-const tenPik = `<img src="img/10-pik.png" alt="card">`
-const ninePik = `<img src="img/9-pik.png" alt="card">`
-const eightPik = `<img src="img/8-pik.png" alt="card">`
-const sevenPik = `<img src="img/7-pik.png" alt="card">`
-const sixPik = `<img src="img/6-pik.png" alt="card">`
-const tuzCherv = `<img src="img/a-hrt.png" alt="card">`
-const kingCherv = `<img src="img/king-hrt.png" alt="card">`
-const ladyCherv = `<img src="img/lady-hrt.png" alt="card">`
-const valCherv = `<img src="img/val-hrt.png" alt="card">`
-const tenCherv = `<img src="img/10-hrt.png" alt="card">`
-const nineCherv = `<img src="img/9-hrt.png" alt="card">`
-const eightCherv = `<img src="img/8-hrt.png" alt="card">`
-const sevenCherv = `<img src="img/7-hrt.png" alt="card">`
-const sixCherv = `<img src="img/6-hrt.png" alt="card">`
-const tuzBubn = `<img src="img/a-b.png" alt="card">`
-const kingBubn = `<img src="img/k-b.png" alt="card">`
-const ladyBubn = `<img src="img/l-b.png" alt="card">`
-const valBubn = `<img src="img/v-b.png" alt="card">`
-const tenBubn = `<img src="img/10-b.png" alt="card">`
-const nineBubn = `<img src="img/9-b.png" alt="card">`
-const eightBubn = `<img src="img/8-b.png" alt="card">`
-const sevenBubn = `<img src="img/7-b.png" alt="card">`
-const sixBubn = `<img src="img/6-b.png" alt="card">`
-const tuzKrest = `<img src="img/a-k.png" alt="card">`
-const kingKrest = `<img src="img/k-k.png" alt="card">`
-const ladyKrest = `<img src="img/l-k.png" alt="card">`
-const valKrest = `<img src="img/v-k.png" alt="card">`
-const tenKrest = `<img src="img/10k.png" alt="card">`
-const nineKrest = `<img src="img/9-k.png" alt="card">`
-const eightKrest = `<img src="img/8-k.png" alt="card">`
-const sevenKrest = `<img src="img/7-k.png" alt="card">`
-const sixKrest = `<img src="img/6-k.png" alt="card">`
+const tuzPik = `<img src="./static/img/tuz-pik.png" alt="card">`
+const kingPik = `<img src="./static/img/king-pik.png" alt="card">`
+const ladyPik = `<img src="./static/img/lady-pik.png" alt="card">`
+const valPik = `<img src="./static/img/val-pik.png" alt="card">`
+const tenPik = `<img src="./static/img/10-pik.png" alt="card">`
+const ninePik = `<img src="./static/img/9-pik.png" alt="card">`
+const eightPik = `<img src="./static/img/8-pik.png" alt="card">`
+const sevenPik = `<img src="./static/img/7-pik.png" alt="card">`
+const sixPik = `<img src="./static/img/6-pik.png" alt="card">`
+const tuzCherv = `<img src="./static/img/a-hrt.png" alt="card">`
+const kingCherv = `<img src="./static/img/king-hrt.png" alt="card">`
+const ladyCherv = `<img src="./static/img/lady-hrt.png" alt="card">`
+const valCherv = `<img src="./static/img/val-hrt.png" alt="card">`
+const tenCherv = `<img src="./static/img/10-hrt.png" alt="card">`
+const nineCherv = `<img src="./static/img/9-hrt.png" alt="card">`
+const eightCherv = `<img src="./static/img/8-hrt.png" alt="card">`
+const sevenCherv = `<img src="./static/img/7-hrt.png" alt="card">`
+const sixCherv = `<img src="./static/img/6-hrt.png" alt="card">`
+const tuzBubn = `<img src="./static/img/a-b.png" alt="card">`
+const kingBubn = `<img src="./static/img/k-b.png" alt="card">`
+const ladyBubn = `<img src="./static/img/l-b.png" alt="card">`
+const valBubn = `<img src="./static/img/v-b.png" alt="card">`
+const tenBubn = `<img src="./static/img/10-b.png" alt="card">`
+const nineBubn = `<img src="./static/img/9-b.png" alt="card">`
+const eightBubn = `<img src="./static/img/8-b.png" alt="card">`
+const sevenBubn = `<img src="./static/img/7-b.png" alt="card">`
+const sixBubn = `<img src="./static/img/6-b.png" alt="card">`
+const tuzKrest = `<img src="./static/img/a-k.png" alt="card">`
+const kingKrest = `<img src="./static/img/k-k.png" alt="card">`
+const ladyKrest = `<img src="./static/img/l-k.png" alt="card">`
+const valKrest = `<img src="./static/img/v-k.png" alt="card">`
+const tenKrest = `<img src="./static/img/10k.png" alt="card">`
+const nineKrest = `<img src="./static/img/9-k.png" alt="card">`
+const eightKrest = `<img src="./static/img/8-k.png" alt="card">`
+const sevenKrest = `<img src="./static/img/7-k.png" alt="card">`
+const sixKrest = `<img src="./static/img/6-k.png" alt="card">`
 
 let cardsArray = [
     tuzPik,
@@ -107,12 +109,8 @@ let cardsArray = [
     sixKrest,
 ]
 
+
 function getRandomInt() {
-    let minValue = 0
-    let maxValue = 35
-    return Math.round(Math.random() * (maxValue - minValue)) + minValue
-}
-function getRandomInt2() {
     let minValue = 0
     let maxValue = 35
     return Math.round(Math.random() * (maxValue - minValue)) + minValue
@@ -146,20 +144,26 @@ function renderEasyGame() {
 
     appEl.innerHTML = appHtml
 
-    // let cardVision = document.querySelectorAll('cards-field__card') - не работает
-    let cardVision = document.getElementById('card-vision') // работает, но только одну карту показывает
-    let closedCard = `<img src="img/card.png" alt="card"></img>`
-    let openedCard = cardsArray[getRandomInt()]
+    let cardsElements = document.querySelectorAll('.cards-field__card')
 
-    cardVision.innerHTML = openedCard
+    // let cardVision = document.getElementById('card-vision')
+    let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    
 
-    setTimeout(() => {
-        cardVision.innerHTML = closedCard
-    }, 5000)
+    for (const cardElement of cardsElements) {
+        let openedCard = cardsArray[getRandomInt()]
+       
+        cardElement.innerHTML = openedCard
 
-    cardVision.addEventListener('click', () => {
-        cardVision.innerHTML = openedCard
-    })
+        setTimeout(() => {
+            cardElement.innerHTML = closedCard
+            
+        }, 5000)
+
+        cardElement.addEventListener('click', () => {
+            cardElement.innerHTML = openedCard
+        })
+    }
 }
 
 function renderMediumGame() {
@@ -179,22 +183,44 @@ function renderMediumGame() {
         </button>
     </header>
     <div class="cards-field">
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
    
     </div>
 </div>`
+    
     appEl.innerHTML = appHtml
+
+    let cardsElements = document.querySelectorAll('.cards-field__card')
+
+    // let cardVision = document.getElementById('card-vision')
+    let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    
+
+    for (const cardElement of cardsElements) {
+        let openedCard = cardsArray[getRandomInt()]
+       
+        cardElement.innerHTML = openedCard
+
+        setTimeout(() => {
+            cardElement.innerHTML = closedCard
+            
+        }, 5000)
+
+        cardElement.addEventListener('click', () => {
+            cardElement.innerHTML = openedCard
+        })
+    }
 }
 
 function renderHardGame() {
@@ -214,27 +240,48 @@ function renderHardGame() {
         </button>
     </header>
     <div class="cards-field">
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
-    <div class="cards-field__card" >${cardsArray[getRandomInt()]}</div>
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
+    <div class="cards-field__card" id="card-vision"></div> 
     </div>
 </div>`
     appEl.innerHTML = appHtml
+
+    let cardsElements = document.querySelectorAll('.cards-field__card')
+
+    // let cardVision = document.getElementById('card-vision')
+    let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    
+
+    for (const cardElement of cardsElements) {
+        let openedCard = cardsArray[getRandomInt()]
+       
+        cardElement.innerHTML = openedCard
+
+        setTimeout(() => {
+            cardElement.innerHTML = closedCard
+            
+        }, 5000)
+
+        cardElement.addEventListener('click', () => {
+            cardElement.innerHTML = openedCard
+        })
+    }
 }
 
 let easyLevelGame = document.getElementById('easy')

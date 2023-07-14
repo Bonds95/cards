@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("statosskyeng-v1.001/Webfonts/stratosskyengweb-regular.woff2") format("woff2");
+  src: url("./static/fonts/stratosskyengweb-regular.woff2") format("woff2");
 }
 * {
   margin: 0;
@@ -130,6 +130,10 @@ body {
   gap: 15px;
 }
 .cards-field__card {
+  width: 95px;
+  height: 133px;
+}
+.cards-field__card-clone {
   width: 95px;
   height: 133px;
 }/*# sourceMappingURL=style.css.map */
