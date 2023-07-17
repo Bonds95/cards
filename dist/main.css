@@ -1,0 +1,142 @@
+/*!*************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./style.css ***!
+  \*************************************************************/
+@font-face {
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(ce93393e831d32412096.woff2) format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #004980;
+  font-family: StratosSkyeng;
+}
+
+.flex-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 480px;
+  min-height: 459px;
+  margin: auto;
+}
+
+.modal {
+  background-color: #c2f5ff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 57px;
+  padding-top: 52px;
+  padding-bottom: 48px;
+}
+.modal__header {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #004980;
+}
+
+.difficulty-level__flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.difficulty-level__levels {
+  background-color: white;
+  border-radius: 12px;
+  color: #0080c1;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  text-align: center;
+  padding: 15px 35px;
+  transition: all 0.4s;
+}
+.difficulty-level__levels:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  background-color: #7ac100;
+  color: white;
+  width: 246px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  transition: all 0.4s;
+}
+.button:hover {
+  transform: scale(1.05);
+}
+
+.background {
+  background-color: #004980;
+  color: white;
+}
+
+.header {
+  padding-top: 22px;
+  padding-left: 22px;
+  padding-right: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__timer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.header__text-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 57px;
+}
+.header__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+.header__count {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  align-self: flex-end;
+}
+
+.cards-field {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 35px;
+  padding-left: 24.5px;
+  padding-right: 24.5px;
+  gap: 15px;
+}
+.cards-field__card {
+  width: 95px;
+  height: 133px;
+}
+.cards-field__card-clone {
+  width: 95px;
+  height: 133px;
+}

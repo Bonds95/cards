@@ -1,4 +1,4 @@
-// import './style.css'
+import './style.css'
 
 let appHtml = null
 let appEl = document.getElementById('app')
@@ -109,11 +109,25 @@ let cardsArray = [
     sixKrest,
 ]
 
-
-function getRandomInt() {
+function getRandomInt(cardNumber) {
     let minValue = 0
     let maxValue = 35
-    return Math.round(Math.random() * (maxValue - minValue)) + minValue
+    const randomCards = []
+    for (let i = 0; i < cardNumber.length; i++) {
+        randomCards[i] =
+            Math.round(Math.random() * (maxValue - minValue)) + minValue
+    }
+    return [...randomCards, ...randomCards]
+    // return Math.round(Math.random() * (maxValue - minValue)) + minValue
+}
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+
+        ;[array[i], array[j]] = [array[j], array[i]]
+    }
+    return array
 }
 
 function renderEasyGame() {
@@ -133,37 +147,44 @@ function renderEasyGame() {
         </button>
     </header>
     <div class="cards-field">
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
     </div>
 </div>`
 
     appEl.innerHTML = appHtml
 
-    let cardsElements = document.querySelectorAll('.cards-field__card')
+    const randomCardsIds = getRandomInt(3)
 
-    // let cardVision = document.getElementById('card-vision')
-    let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-    
+    const shuffledArray = shuffle(randomCardsIds)
 
-    for (const cardElement of cardsElements) {
-        let openedCard = cardsArray[getRandomInt()]
-       
-        cardElement.innerHTML = openedCard
+    const cardField = document.querySelector('.cards-field')
 
-        setTimeout(() => {
-            cardElement.innerHTML = closedCard
-            
-        }, 5000)
-
-        cardElement.addEventListener('click', () => {
-            cardElement.innerHTML = openedCard
-        })
+    const cardElements = []
+    for (let i = 0; i < shuffledArray.length; i++) {
+        const element = shuffledArray[i]
+        const cardElement = `<div class="cards-field__card" id="card-vision">${cardsArray[element]}</div>`
+        cardElements.push(cardElement)
     }
+
+    cardField.innerHTML = cardElements.join('')
+
+    // let cardsElements = document.querySelectorAll('.cards-field__card')
+
+    // // let cardVision = document.getElementById('card-vision')
+    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+
+    // for (const cardElement of cardsElements) {
+    //     let openedCard = cardsArray[getRandomInt()]
+
+    //     cardElement.innerHTML = openedCard
+
+    //     setTimeout(() => {
+    //         cardElement.innerHTML = closedCard
+    //     }, 5000)
+
+    //     cardElement.addEventListener('click', () => {
+    //         cardElement.innerHTML = `<div class="cards-field__card" id="card-vision">${openedCard}</div>`
+    //     })
+    // }
 }
 
 function renderMediumGame() {
@@ -198,23 +219,21 @@ function renderMediumGame() {
    
     </div>
 </div>`
-    
+
     appEl.innerHTML = appHtml
 
     let cardsElements = document.querySelectorAll('.cards-field__card')
 
     // let cardVision = document.getElementById('card-vision')
     let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-    
 
     for (const cardElement of cardsElements) {
         let openedCard = cardsArray[getRandomInt()]
-       
+
         cardElement.innerHTML = openedCard
 
         setTimeout(() => {
             cardElement.innerHTML = closedCard
-            
         }, 5000)
 
         cardElement.addEventListener('click', () => {
@@ -266,16 +285,14 @@ function renderHardGame() {
 
     // let cardVision = document.getElementById('card-vision')
     let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-    
 
     for (const cardElement of cardsElements) {
         let openedCard = cardsArray[getRandomInt()]
-       
+
         cardElement.innerHTML = openedCard
 
         setTimeout(() => {
             cardElement.innerHTML = closedCard
-            
         }, 5000)
 
         cardElement.addEventListener('click', () => {
