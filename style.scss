@@ -95,6 +95,17 @@ body {
     background-color: #004980;
     color: white;
 }
+.cards-hide {
+    width: 95px;
+    height: 133px;
+}
+.picture {
+    background-image: url(static/img/card.png);   
+}
+
+.opacity{
+    opacity: 0;
+}
 
 .header {
     padding-top: 22px;

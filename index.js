@@ -113,7 +113,7 @@ function getRandomInt(cardNumber) {
     let minValue = 0
     let maxValue = 35
     const randomCards = []
-    for (let i = 0; i < cardNumber.length; i++) {
+    for (let i = 0; i < cardNumber; i++) {
         randomCards[i] =
             Math.round(Math.random() * (maxValue - minValue)) + minValue
     }
@@ -160,29 +160,53 @@ function renderEasyGame() {
 
     const cardElements = []
     for (let i = 0; i < shuffledArray.length; i++) {
-        const element = shuffledArray[i]
-        const cardElement = `<div class="cards-field__card" id="card-vision">${cardsArray[element]}</div>`
+        var element = shuffledArray[i]
+        var cardElement = `<div class="cards-hide"><div class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
         cardElements.push(cardElement)
     }
 
     cardField.innerHTML = cardElements.join('')
 
+    let cardsVision = document.querySelectorAll('.cards-hide')
+    for (const cardVision of cardsVision) {
+        setTimeout(() => {
+            cardVision.classList.add('picture')
+        }, 2000)
+        cardVision.addEventListener('click', () => {
+            cardVision.classList.remove('picture')
+        })
+    }
+    let clickCards = document.querySelectorAll('.cards-field__card')
+    for (const clickCard of clickCards) {
+        setTimeout(() => {
+            clickCard.classList.add('opacity')
+        }, 2000)
+        clickCard.addEventListener('click', () => {
+            clickCard.classList.remove('opacity')
+        })
+    }
+    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+
+    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    // setTimeout(() => {
+    //     cardElement.innerHTML = closedCard
+    // }, 5000)
+
     // let cardsElements = document.querySelectorAll('.cards-field__card')
 
     // // let cardVision = document.getElementById('card-vision')
+
+    // let cardVision = document.querySelectorAll('.cards-field__card')
     // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
 
-    // for (const cardElement of cardsElements) {
-    //     let openedCard = cardsArray[getRandomInt()]
-
-    //     cardElement.innerHTML = openedCard
-
+    // for (const cardEl of cardVision) {
     //     setTimeout(() => {
-    //         cardElement.innerHTML = closedCard
+    //         cardEl.innerHTML = closedCard
     //     }, 5000)
 
-    //     cardElement.addEventListener('click', () => {
-    //         cardElement.innerHTML = `<div class="cards-field__card" id="card-vision">${openedCard}</div>`
+    //     cardEl.addEventListener('click', () => {
+    //         cardEl.innerHTML
     //     })
     // }
 }
@@ -204,40 +228,42 @@ function renderMediumGame() {
         </button>
     </header>
     <div class="cards-field">
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-   
     </div>
 </div>`
 
     appEl.innerHTML = appHtml
 
-    let cardsElements = document.querySelectorAll('.cards-field__card')
+    const randomCardsIds = getRandomInt(6)
 
-    // let cardVision = document.getElementById('card-vision')
-    let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    const shuffledArray = shuffle(randomCardsIds)
 
-    for (const cardElement of cardsElements) {
-        let openedCard = cardsArray[getRandomInt()]
+    const cardField = document.querySelector('.cards-field')
 
-        cardElement.innerHTML = openedCard
+    const cardElements = []
+    for (let i = 0; i < shuffledArray.length; i++) {
+        var element = shuffledArray[i]
+        var cardElement = `<div class="cards-hide"><div class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
+        cardElements.push(cardElement)
+    }
 
+    cardField.innerHTML = cardElements.join('')
+
+    let cardsVision = document.querySelectorAll('.cards-hide')
+    for (const cardVision of cardsVision) {
         setTimeout(() => {
-            cardElement.innerHTML = closedCard
+            cardVision.classList.add('picture')
         }, 5000)
-
-        cardElement.addEventListener('click', () => {
-            cardElement.innerHTML = openedCard
+        cardVision.addEventListener('click', () => {
+            cardVision.classList.remove('picture')
+        })
+    }
+    let clickCards = document.querySelectorAll('.cards-field__card')
+    for (const clickCard of clickCards) {
+        setTimeout(() => {
+            clickCard.classList.add('opacity')
+        }, 5000)
+        clickCard.addEventListener('click', () => {
+            clickCard.classList.remove('opacity')
         })
     }
 }
@@ -259,44 +285,41 @@ function renderHardGame() {
         </button>
     </header>
     <div class="cards-field">
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
-    <div class="cards-field__card" id="card-vision"></div> 
     </div>
 </div>`
     appEl.innerHTML = appHtml
 
-    let cardsElements = document.querySelectorAll('.cards-field__card')
+    const randomCardsIds = getRandomInt(9)
 
-    // let cardVision = document.getElementById('card-vision')
-    let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
+    const shuffledArray = shuffle(randomCardsIds)
 
-    for (const cardElement of cardsElements) {
-        let openedCard = cardsArray[getRandomInt()]
+    const cardField = document.querySelector('.cards-field')
 
-        cardElement.innerHTML = openedCard
+    const cardElements = []
+    for (let i = 0; i < shuffledArray.length; i++) {
+        var element = shuffledArray[i]
+        var cardElement = `<div class="cards-hide"><div class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
+        cardElements.push(cardElement)
+    }
 
+    cardField.innerHTML = cardElements.join('')
+
+    let cardsVision = document.querySelectorAll('.cards-hide')
+    for (const cardVision of cardsVision) {
         setTimeout(() => {
-            cardElement.innerHTML = closedCard
+            cardVision.classList.add('picture')
         }, 5000)
-
-        cardElement.addEventListener('click', () => {
-            cardElement.innerHTML = openedCard
+        cardVision.addEventListener('click', () => {
+            cardVision.classList.remove('picture')
+        })
+    }
+    let clickCards = document.querySelectorAll('.cards-field__card')
+    for (const clickCard of clickCards) {
+        setTimeout(() => {
+            clickCard.classList.add('opacity')
+        }, 2000)
+        clickCard.addEventListener('click', () => {
+            clickCard.classList.remove('opacity')
         })
     }
 }
