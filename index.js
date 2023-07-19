@@ -161,7 +161,7 @@ function renderEasyGame() {
     const cardElements = []
     for (let i = 0; i < shuffledArray.length; i++) {
         var element = shuffledArray[i]
-        var cardElement = `<div class="cards-hide"><div class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
+        var cardElement = `<div class="cards-hide"><div data-id="${element}" class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
         cardElements.push(cardElement)
     }
 
@@ -181,10 +181,17 @@ function renderEasyGame() {
         setTimeout(() => {
             clickCard.classList.add('opacity')
         }, 2000)
+        let openedCard = 0
         clickCard.addEventListener('click', () => {
             clickCard.classList.remove('opacity')
+            let cardValue = clickCard.dataset.id
+            console.log(cardValue)
+
+            openedCard += 1
+            console.log(openedCard)
         })
     }
+
     // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
     // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
 
