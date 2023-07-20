@@ -171,53 +171,42 @@ function renderEasyGame() {
     for (const cardVision of cardsVision) {
         setTimeout(() => {
             cardVision.classList.add('picture')
-        }, 2000)
+        }, 5000)
         cardVision.addEventListener('click', () => {
             cardVision.classList.remove('picture')
         })
     }
     let clickCards = document.querySelectorAll('.cards-field__card')
+    let openCards = []
     for (const clickCard of clickCards) {
         setTimeout(() => {
             clickCard.classList.add('opacity')
-        }, 2000)
-        let openedCard = 0
+        }, 5000)
+
         clickCard.addEventListener('click', () => {
             clickCard.classList.remove('opacity')
             let cardValue = clickCard.dataset.id
-            console.log(cardValue)
 
-            openedCard += 1
-            console.log(openedCard)
+            openCards.push(cardValue)
+            console.log(openCards)
+            if (openCards.length == 2) {
+                if (openCards[0] != openCards[1]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 4) {
+                if (openCards[2] != openCards[3]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 6) {
+                setTimeout(() => {
+                    alert('вы выиграли!')
+                }, 1000)
+            }
         })
     }
-
-    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-
-    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-    // setTimeout(() => {
-    //     cardElement.innerHTML = closedCard
-    // }, 5000)
-
-    // let cardsElements = document.querySelectorAll('.cards-field__card')
-
-    // // let cardVision = document.getElementById('card-vision')
-
-    // let cardVision = document.querySelectorAll('.cards-field__card')
-    // let closedCard = `<img src="./static/img/card.png" alt="card"></img>`
-
-    // for (const cardEl of cardVision) {
-    //     setTimeout(() => {
-    //         cardEl.innerHTML = closedCard
-    //     }, 5000)
-
-    //     cardEl.addEventListener('click', () => {
-    //         cardEl.innerHTML
-    //     })
-    // }
 }
-
 function renderMediumGame() {
     appHtml = `<div class="container">
     <header class="header">
@@ -249,7 +238,7 @@ function renderMediumGame() {
     const cardElements = []
     for (let i = 0; i < shuffledArray.length; i++) {
         var element = shuffledArray[i]
-        var cardElement = `<div class="cards-hide"><div class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
+        var cardElement = `<div class="cards-hide"><div data-id="${element}" class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
         cardElements.push(cardElement)
     }
 
@@ -265,12 +254,48 @@ function renderMediumGame() {
         })
     }
     let clickCards = document.querySelectorAll('.cards-field__card')
+    let openCards = []
     for (const clickCard of clickCards) {
         setTimeout(() => {
             clickCard.classList.add('opacity')
         }, 5000)
+
         clickCard.addEventListener('click', () => {
             clickCard.classList.remove('opacity')
+            let cardValue = clickCard.dataset.id
+
+            openCards.push(cardValue)
+            console.log(openCards)
+            if (openCards.length == 2) {
+                if (openCards[0] != openCards[1]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 4) {
+                if (openCards[2] != openCards[3]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 6) {
+                if (openCards[4] != openCards[5]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 8) {
+                if (openCards[6] != openCards[7]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 10) {
+                if (openCards[8] != openCards[9]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 12) {
+                setTimeout(() => {
+                    alert('вы выиграли!')
+                }, 1000)
+            }
         })
     }
 }
@@ -294,6 +319,7 @@ function renderHardGame() {
     <div class="cards-field">
     </div>
 </div>`
+
     appEl.innerHTML = appHtml
 
     const randomCardsIds = getRandomInt(9)
@@ -305,7 +331,7 @@ function renderHardGame() {
     const cardElements = []
     for (let i = 0; i < shuffledArray.length; i++) {
         var element = shuffledArray[i]
-        var cardElement = `<div class="cards-hide"><div class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
+        var cardElement = `<div class="cards-hide"><div data-id="${element}" class="cards-field__card" id="card-vision">${cardsArray[element]}</div></div>`
         cardElements.push(cardElement)
     }
 
@@ -321,15 +347,68 @@ function renderHardGame() {
         })
     }
     let clickCards = document.querySelectorAll('.cards-field__card')
+    let openCards = []
     for (const clickCard of clickCards) {
         setTimeout(() => {
             clickCard.classList.add('opacity')
-        }, 2000)
+        }, 5000)
+
         clickCard.addEventListener('click', () => {
             clickCard.classList.remove('opacity')
+            let cardValue = clickCard.dataset.id
+
+            openCards.push(cardValue)
+            console.log(openCards)
+            if (openCards.length == 2) {
+                if (openCards[0] != openCards[1]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 4) {
+                if (openCards[2] != openCards[3]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 6) {
+                if (openCards[4] != openCards[5]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 8) {
+                if (openCards[6] != openCards[7]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 10) {
+                if (openCards[8] != openCards[9]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 12) {
+                if (openCards[10] != openCards[11]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 14) {
+                if (openCards[12] != openCards[13]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 16) {
+                if (openCards[14] != openCards[15]) {
+                    alert('вы проиграли!')
+                }
+            }
+            if (openCards.length == 18) {
+                setTimeout(() => {
+                    alert('вы выиграли!')
+                }, 1000)
+            }
         })
     }
 }
+
+
 
 let easyLevelGame = document.getElementById('easy')
 let mediumLevelGame = document.getElementById('medium')
