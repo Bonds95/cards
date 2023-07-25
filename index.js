@@ -1,9 +1,15 @@
-let page = null
+import './style.css'
+import {
+    renderEasyGame,
+    renderMediumGame,
+    renderHardGame,
+} from './render-game.js'
+
 let appHtml = null
-let appEl = document.getElementById('app')
+export let appEl = document.getElementById('app')
 //check
-function renderMainPage() {
-    appHtml = `<div class="container">
+export function renderMainPage() {
+    appHtml = `<div class="flex-container">
     <div class="cards">
 <div class="modal difficulty-level">
  <h1 class="modal__header">
@@ -29,31 +35,8 @@ function renderMainPage() {
 </div>`
 
     appEl.innerHTML = appHtml
-}
-renderMainPage()
 
-function renderEasyGame() {
-    appHtml = `<h1 class="modal__header">
-Легкий уровень сложности
-</h1>`
-    appEl.innerHTML = appHtml
-}
-
-function renderMediumGame() {
-    appHtml = `<h1 class="modal__header">
-    Средний уровень сложности
-    </h1>`
-    appEl.innerHTML = appHtml
-}
-
-function renderHardGame() {
-    appHtml = `<h1 class="modal__header">
-    Тяжелый уровень сложности
-    </h1>`
-    appEl.innerHTML = appHtml
-}
-
-let easyLevelGame = document.getElementById('easy')
+    let easyLevelGame = document.getElementById('easy')
 let mediumLevelGame = document.getElementById('medium')
 let hardLevelGame = document.getElementById('hard')
 
@@ -98,8 +81,11 @@ startGameButton.addEventListener('click', () => {
     if (gameLevel == 'hard') {
         renderHardGame()
     }
-    // почему-то если здесь просто поставить else, то не работает
     if (gameLevel == null) {
         alert('Выберите уровень сложности игры')
     }
 })
+
+}
+renderMainPage()
+

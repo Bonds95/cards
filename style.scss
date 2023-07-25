@@ -3,8 +3,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('statosskyeng-v1.001/Webfonts/stratosskyengweb-regular.woff2')
-        format('woff2');
+    src: url('./static/fonts/stratosskyengweb-regular.woff2') format('woff2');
 }
 
 * {
@@ -13,19 +12,16 @@
 }
 
 body {
+    background-color: #004980;
     font-family: StratosSkyeng;
+}
+
+.flex-container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #004980;
 }
-
-// .container {
-    
-//     min-height: 774px;
-//     width: 1024px;
-// }
 
 .cards {
     width: 480px;
@@ -49,6 +45,50 @@ body {
         line-height: 48px;
         text-align: center;
         color: #004980;
+    }
+}
+.result{
+
+    background-color: #c2f5ff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__image{
+        padding-top: 28px;
+    }
+
+    &__header {
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        color: #004980;
+    }
+
+    &__body{
+        padding-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &__timer{
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 72px;
+    }
+    &__button{
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 }
 
@@ -99,6 +139,17 @@ body {
     background-color: #004980;
     color: white;
 }
+.cards-hide {
+    width: 95px;
+    height: 133px;
+}
+.picture {
+    background-image: url(static/img/card.png);   
+}
+
+.opacity{
+    opacity: 0;
+}
 
 .header {
     padding-top: 22px;
@@ -145,6 +196,10 @@ body {
     gap: 15px;
 
     &__card {
+        width: 95px;
+        height: 133px;
+    }
+    &__card-clone {
         width: 95px;
         height: 133px;
     }
