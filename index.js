@@ -8,7 +8,7 @@ import {
 let appHtml = null
 export let appEl = document.getElementById('app')
 //check
-function renderMainPage() {
+export function renderMainPage() {
     appHtml = `<div class="flex-container">
     <div class="cards">
 <div class="modal difficulty-level">
@@ -35,10 +35,8 @@ function renderMainPage() {
 </div>`
 
     appEl.innerHTML = appHtml
-}
-renderMainPage()
 
-let easyLevelGame = document.getElementById('easy')
+    let easyLevelGame = document.getElementById('easy')
 let mediumLevelGame = document.getElementById('medium')
 let hardLevelGame = document.getElementById('hard')
 
@@ -83,8 +81,11 @@ startGameButton.addEventListener('click', () => {
     if (gameLevel == 'hard') {
         renderHardGame()
     }
-    // почему-то если здесь просто поставить else, то не работает
     if (gameLevel == null) {
         alert('Выберите уровень сложности игры')
     }
 })
+
+}
+renderMainPage()
+

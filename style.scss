@@ -47,6 +47,50 @@ body {
         color: #004980;
     }
 }
+.result{
+
+    background-color: #c2f5ff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__image{
+        padding-top: 28px;
+    }
+
+    &__header {
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        color: #004980;
+    }
+
+    &__body{
+        padding-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &__timer{
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 72px;
+    }
+    &__button{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
 
 .difficulty-level {
     &__flex-container {
