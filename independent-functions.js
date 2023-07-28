@@ -1,4 +1,5 @@
-import { appEl, renderMainPage } from './index.js'
+import { appEl, renderMainPage, timer } from './index.js'
+
 let appHtml = null
 
 export function getRandomInt(cardNumber) {
@@ -32,7 +33,7 @@ export function renderWinPage() {
              </h1>
              <div class="result__body">
                  <p class="result__text">Затраченное время:</p>
-                 <p class="result__timer">01.20</p>
+                 <p class="result__timer">1.20</p>
              </div>
              <button class="result__button button" id="start-again-button">
                   Играть снова
@@ -44,7 +45,7 @@ export function renderWinPage() {
     appEl.innerHTML = appHtml
 
     let beginButton = document.querySelector('.result__button')
-    beginButton.addEventListener("click", () => {
+    beginButton.addEventListener('click', () => {
         renderMainPage()
     })
 }
@@ -70,7 +71,9 @@ export function renderDefeatPage() {
     appEl.innerHTML = appHtml
 
     let beginButton = document.querySelector('.result__button')
-    beginButton.addEventListener("click", () => {
+    beginButton.addEventListener('click', () => {
         renderMainPage()
     })
 }
+
+

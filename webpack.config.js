@@ -1,12 +1,12 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const copyPlugin = require('copy-webpack-plugin')
-const miniCssExtractPlugin = require("mini-css-extract-plugin")
-const cssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
     entry: './index.js',
-    mode: "development",
+    mode: 'development',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -14,7 +14,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.css$/, use: [miniCssExtractPlugin.loader, 'css-loader'] },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: '/node_modules/',
+            },
+            {
+                test: /\.css$/,
+                use: [miniCssExtractPlugin.loader, 'css-loader'],
+            },
             {
                 test: /\.(pmg|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
@@ -25,6 +33,9 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.ts', '.js'],
+    },
     plugins: [
         new copyPlugin({
             patterns: [{ from: 'static', to: 'static' }],
@@ -32,9 +43,9 @@ module.exports = {
         new htmlWebpackPlugin({
             template: './index.html',
         }),
-        new miniCssExtractPlugin()
+        new miniCssExtractPlugin(),
     ],
     optimization: {
-        minimizer: ["...", new cssMinimizerPlugin()]
-    }
+        minimizer: ['...', new cssMinimizerPlugin()],
+    },
 }

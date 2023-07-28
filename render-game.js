@@ -1,4 +1,9 @@
-import { shuffle, getRandomInt, renderDefeatPage, renderWinPage } from './independent-functions.js'
+import {
+    shuffle,
+    getRandomInt,
+    renderDefeatPage,
+    renderWinPage,
+} from './independent-functions.js'
 import { cardsArray } from './cards-array.js'
 import { appEl, renderMainPage } from './index.js'
 let appHtml = null
@@ -26,7 +31,7 @@ export function renderEasyGame() {
 
     let restartButton = document.querySelector('.header__button')
 
-    restartButton.addEventListener("click", () => {
+    restartButton.addEventListener('click', () => {
         renderMainPage()
     })
 
@@ -61,12 +66,12 @@ export function renderEasyGame() {
             clickCard.classList.add('opacity')
             clickCard.addEventListener('click', () => {
                 // if (cardClicked == true) {
-                    
+
                 // console.log(cardClicked);
-                
+
                 clickCard.classList.remove('opacity')
                 let cardValue = clickCard.dataset.id
-    
+
                 openCards.push(cardValue)
                 console.log(openCards)
                 if (openCards.length == 2) {
@@ -86,13 +91,11 @@ export function renderEasyGame() {
                 }
                 // cardClicked = false
                 // }
-                
             })
         }, 5000)
         // let cardClicked = clickCard.dataset.isClicked
-        
+
         // console.log(clickCard.dataset.isClicked);
-        
     }
 }
 export function renderMediumGame() {
@@ -119,7 +122,7 @@ export function renderMediumGame() {
 
     let restartButton = document.querySelector('.header__button')
 
-    restartButton.addEventListener("click", () => {
+    restartButton.addEventListener('click', () => {
         renderMainPage()
     })
 
@@ -155,7 +158,7 @@ export function renderMediumGame() {
             clickCard.addEventListener('click', () => {
                 clickCard.classList.remove('opacity')
                 let cardValue = clickCard.dataset.id
-    
+
                 openCards.push(cardValue)
                 console.log(openCards)
                 if (openCards.length == 2) {
@@ -166,13 +169,11 @@ export function renderMediumGame() {
                 if (openCards.length == 4) {
                     if (openCards[2] != openCards[3]) {
                         renderDefeatPage()
-
                     }
                 }
                 if (openCards.length == 6) {
                     if (openCards[4] != openCards[5]) {
                         renderDefeatPage()
-
                     }
                 }
                 if (openCards.length == 8) {
@@ -192,8 +193,6 @@ export function renderMediumGame() {
                 }
             })
         }, 5000)
-
-        
     }
 }
 export function renderHardGame() {
@@ -220,7 +219,7 @@ export function renderHardGame() {
 
     let restartButton = document.querySelector('.header__button')
 
-    restartButton.addEventListener("click", () => {
+    restartButton.addEventListener('click', () => {
         renderMainPage()
     })
 
@@ -256,7 +255,7 @@ export function renderHardGame() {
             clickCard.addEventListener('click', () => {
                 clickCard.classList.remove('opacity')
                 let cardValue = clickCard.dataset.id
-    
+
                 openCards.push(cardValue)
                 console.log(openCards)
                 if (openCards.length == 2) {
@@ -306,7 +305,5 @@ export function renderHardGame() {
                 }
             })
         }, 5000)
-
-        
     }
 }
